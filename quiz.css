@@ -1,0 +1,57 @@
+body{
+    font-size: 2em;
+    font-family: sans-serif;
+    background-color: purple;
+}
+.result{
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+    opacity:0;
+
+}
+.dispscore{
+    background-color: aqua;
+    padding: 20px;
+}
+.page{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.question{
+    background-color: aquamarine;
+    width: 75%;
+    padding: 20px;
+    text-align: center;
+}
+.options{
+    text-align: left;
+    background-color: orange;
+    width: 60%;
+    padding: 20px;
+}
+.submitbutton{
+    background-color: green;
+    font-size: 1em;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+
+    
+}
+.retry{
+    background-color: greenyellow;
+    font-size: 1em;
+    border-radius: 10px;
+    padding: 10px;
+}
+.feedback{
+    background-color: blue;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}

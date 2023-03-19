@@ -1,0 +1,44 @@
+.icon{
+    display:flex;
+    justify-content: center;
+}
+body{
+    background-image:linear-gradient(to right, rgb(0, 136, 104),rgb(0, 43, 151),rgb(56, 0, 146));
+    color:white;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    font-family: sans-serif;
+}
+.triangle{
+    position:relative;
+    
+    transform:rotate(90deg);
+    width:1%;
+    height: 0vh;
+    border-left:2vw solid transparent;
+    border-right:2vw solid transparent;
+    border-bottom:4vw solid brown;
+}
+.starticon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aquamarine;
+    width:7vw ;
+    height:7vw;
+    border:0.2vw solid aquamarine;
+    border-radius: 100%;
+    
+    
+}
+.entire{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+p{
+    font-size: 3em;
+}
