@@ -1,40 +1,4 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="quiz.css">
-    <script src="quiz.js"></script>
-    <!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
-    <title>Quiz</title>
-</head>
-<body>
-    <div class="page">
-    <div class="progressbar"></div>
-    <div class="question"></div>
-    <div class="options">
-        
-        <input type="radio" name="radioans" class="radioans">
-        <label class="ans"></label><br>
-        <input type="radio" name="radioans" class="radioans">
-        <label class="ans"></label><br>
-        <input type="radio" name="radioans" class="radioans">
-        <label class="ans"></label><br>
-        <input type="radio" name="radioans" class="radioans">
-        <label class="ans"></label><br>
-    </div>
-    <button class="submitbutton">Submit</button>
-    <div class="feedback"></div>
-    <div class="result">
-    <div class="dispscore"></div>
-    <button class="retry">Retry</button>
-    </div>
-    </div>
-
-
-
-    <!-- <script>
-        var current = 0;
+var current = 0;
         var questions ;
         var myinterval;
         var sunmitted = 0;
@@ -82,11 +46,15 @@
             
             console.log(q);
             current++;
-            if(current == 9){
+            if(current == 10){
+                clearInterval(nextquestion);
                 clearInterval(myinterval)
                 finish();
             }
-            displayquestion(q,current)
+            else{
+                displayquestion(q,current)
+            }
+            
 
         }
 
@@ -108,6 +76,7 @@
         }
 
         document.getElementsByClassName("submitbutton")[0].addEventListener("click",()=>{
+           
             const answ = document.getElementsByClassName("radioans");
             const feedback = document.getElementsByClassName("feedback")[0];
             let flag = 0;
@@ -132,14 +101,4 @@
             location.reload();
         })
 
-
-
-
-
-
-
-        
-    </script> -->
-    
-</body>
-</html>
+        document.getElementsByTagName("body")[0].addEventListener("load",start);
