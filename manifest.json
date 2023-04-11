@@ -1,18 +1,11 @@
 {
-    "name": "Quiz",
-    "version": "1.0",
-    "manifest_version": 3,
-    "background": {
-      "service_worker": "script.js"
-    },
-    "permissions": [
-      "scripting",
-      "webNavigation",
-      "storage"
-    ],
-    "host_permissions": [
-      "https://*/*",
-      "http://*/*"
-    ],
-    "action": {}
+  "name": "Quiz game",
+  "version": "1.0.0",
+  "description": "your daily dose of general knowledge",
+  "manifest_version": 3,
+  "author": "Spider",
+  "action":{
+      "default_popup": "popup.html",
+      "default_title": "Daily quiz"
   }
+}
