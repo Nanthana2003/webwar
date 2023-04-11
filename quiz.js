@@ -33,6 +33,7 @@ var current = 0;
                 document.querySelectorAll(".radioans")[j].checked = false;
                 document.querySelectorAll(".radioans")[j].disabled = false;
             }
+            loadbar();
             // options[3].innerHTML = ques[i].correctAnswer;
             // options[3].setAttribute("for",ques[i].correctAnswer)
             // document.querySelectorAll(".radioans")[3].setAttribute("value",ques[i].correctAnswer)
@@ -105,11 +106,32 @@ var current = 0;
             
         // }
 
+        function loadbar(){
+            var len = 0;
+            const bar = document.querySelectorAll(".progressbar")[0];
+            var id;
+            clearInterval(id);
+            
+            id = setInterval(loading, 1)
+            function loading(){
+                if(len>=100) {
+                    //bar.style.width = "0px";
+                    clearInterval(id);
+                }
+                else{
+                    len = len+0.066;
+                    bar.style.width = len+"%";
+                }
+            }
+            
+        }
+
         function finish(){
+            document.querySelectorAll(".page")[0].style.display = "none";
             document.querySelectorAll(".dispscore")[0].innerHTML = "Your score = "+score;
             const res = document.querySelectorAll(".result")[0];
             
-            res.style.opacity = 1;
+            res.style.display = "flex";
         }
         console.log(document.querySelectorAll(".submitbutton")[0])
         document.querySelectorAll(".submitbutton")[0].addEventListener("click",()=>{
@@ -127,10 +149,12 @@ var current = 0;
             }
             feedback.style.opacity = 1;
             if(flag == 0){
-                feedback.innerHTML = "wrong";
+                feedback.innerHTML = "Your answer is wrong";
+                feedback.style.backgroundColor = "red";
             }
             else{
-                feedback.innerHTML = "correct"
+                feedback.innerHTML = "Your answer is correct !! ";
+                feedback.style.backgroundColor = "greenyellow";
             }
         })
 

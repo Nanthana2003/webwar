@@ -1,48 +1,61 @@
 body{
-    font-size: 2em;
+    font-size: 1.3em;
     font-family: sans-serif;
     background-color: purple;
     min-width: 800px;
     min-height: 800px;
+    margin: 0px;
+    box-sizing: border-box;
 }
 .result{
-    display: flex;
-    width: 50%;
-    justify-content: space-around;
-    opacity:0;
-
+    padding-top: 30px;
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    display: none;
+    margin: 20px;
 }
 .dispscore{
     background-color: aqua;
-    padding: 20px;
+    padding: 10px;
+    margin: 20px;
+    width: 300px;
+    text-align: center;
 }
 .page{
+    margin-top: 30px;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    
 }
 .question{
     background-color: aquamarine;
-    width: 75%;
+    width: 80%;
     padding: 20px;
     text-align: center;
+    margin: 10px;
 }
 .options{
     text-align: left;
     background-color: orange;
-    width: 60%;
+    width: 80%;
     padding: 20px;
+    margin: 20px;
 }
 .submitbutton{
-    background-color: green;
+    background-color: rgb(253, 253, 8);
     font-size: 1em;
-    color: white;
+    color: rgb(0, 38, 255);
+    box-shadow: 0px 0px 10px blue;
+    border: 2px solid rgb(253, 253, 8);
     border-radius: 10px;
     padding: 10px;
-
+    margin: 20px;
     
 }
 .retry{
@@ -50,10 +63,18 @@ body{
     font-size: 1em;
     border-radius: 10px;
     padding: 10px;
+    margin: 20px;
 }
 .feedback{
     background-color: blue;
     color: white;
     padding: 20px;
     text-align: center;
+    margin: 20px;
+}
+.progressbar{
+    margin: 0px;
+    height: 40px;
+    display: block;
+    background-color: pink;
 }
